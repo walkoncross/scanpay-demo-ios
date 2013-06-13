@@ -18,13 +18,13 @@
 		3C5D85721760BBED00C21E7D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C5D85711760BBED00C21E7D /* Default-568h@2x.png */; };
 		3C5D85751760BBED00C21E7D /* _ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5D85741760BBED00C21E7D /* _ViewController.m */; };
 		3C5D85781760BBED00C21E7D /* _ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C5D85761760BBED00C21E7D /* _ViewController.xib */; };
-		3C5D857F1760BC2300C21E7D /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5D857E1760BC2300C21E7D /* libc++.dylib */; };
 		3C5D85811760BC2A00C21E7D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5D85801760BC2A00C21E7D /* CoreMedia.framework */; };
 		3C5D85831760BC2F00C21E7D /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5D85821760BC2F00C21E7D /* AssetsLibrary.framework */; };
 		3C5D85851760BC3700C21E7D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5D85841760BC3700C21E7D /* AVFoundation.framework */; };
 		3C5D85871760BC3B00C21E7D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5D85861760BC3B00C21E7D /* AudioToolbox.framework */; };
 		3C5D85891760BC4500C21E7D /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5D85881760BC4500C21E7D /* CoreVideo.framework */; };
 		3C5D858B1760BC4E00C21E7D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5D858A1760BC4E00C21E7D /* QuartzCore.framework */; };
+		3CAB50071769C5E5009AF875 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAB50061769C5E5009AF875 /* libstdc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +51,7 @@
 		3C5D85861760BC3B00C21E7D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		3C5D85881760BC4500C21E7D /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		3C5D858A1760BC4E00C21E7D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3CAB50061769C5E5009AF875 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +59,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CAB50071769C5E5009AF875 /* libstdc++.dylib in Frameworks */,
 				3C5D858B1760BC4E00C21E7D /* QuartzCore.framework in Frameworks */,
 				3C5D85891760BC4500C21E7D /* CoreVideo.framework in Frameworks */,
 				3C5D85871760BC3B00C21E7D /* AudioToolbox.framework in Frameworks */,
 				3C5D85851760BC3700C21E7D /* AVFoundation.framework in Frameworks */,
 				3C5D85831760BC2F00C21E7D /* AssetsLibrary.framework in Frameworks */,
 				3C5D85811760BC2A00C21E7D /* CoreMedia.framework in Frameworks */,
-				3C5D857F1760BC2300C21E7D /* libc++.dylib in Frameworks */,
 				3C5D855C1760BBED00C21E7D /* UIKit.framework in Frameworks */,
 				3C5D855E1760BBED00C21E7D /* Foundation.framework in Frameworks */,
 				3C5D85601760BBED00C21E7D /* CoreGraphics.framework in Frameworks */,
@@ -94,6 +95,7 @@
 		3C5D855A1760BBED00C21E7D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3CAB50061769C5E5009AF875 /* libstdc++.dylib */,
 				3C5D858A1760BC4E00C21E7D /* QuartzCore.framework */,
 				3C5D85881760BC4500C21E7D /* CoreVideo.framework */,
 				3C5D85861760BC3B00C21E7D /* AudioToolbox.framework */,
@@ -288,6 +290,7 @@
 		3C5D857C1760BBED00C21E7D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libstdc++";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/scanpay\"",
@@ -308,6 +311,7 @@
 		3C5D857D1760BBED00C21E7D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "libstdc++";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/scanpay\"",
