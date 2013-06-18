@@ -21,23 +21,23 @@ Instruction
 -----------
 
 1. Drag and drop the folder ScanPay to your project
-2. Add the following frameworks to your project :
-  * libstdc++.dylib 
+2. Go to Target -> "Other Linker Flags" and add the following flag: `-ObjC`
+3. Go to Project Settings "Build Settings" search for "C++ Standard Library" and change to `libstdc++`
+4. Add the following frameworks to your project :
+  * libstdc++.dylib
   * libc++.dylib 
-  * CoreVideo.framework 
-  * CoreMedia.framework
-  * AVFoundation.framework 
-  * AudioToolbox.framework 
-  * QuartzCore.framework
-  * AssetsLibrary.framework
-3. Go to Target -> Other Linker Flags and add the following flag: `-ObjC`
-4. Go to Project Settings Build Settings search for C++ Standard Library and change to `libstdc++`
+  * CoreVideo
+  * CoreMedia
+  * AVFoundation
+  * AudioToolbox
+  * QuartzCore
+  * AssetsLibrary
+
 5. Create a class conform to ScanPayDelegate protocol 
 
 ### Sample code
 
 To start the scan simply present the scanViewController from a UIViewController:
-
 ```obj-c
 ScanPayViewController *scan = [[ScanPayViewController alloc]initWithDelegate:self appToken:@"YOUR_TOKEN_HERE"];
 [self presentViewController:scan animated:YES completion:nil];
@@ -45,7 +45,6 @@ ScanPayViewController *scan = [[ScanPayViewController alloc]initWithDelegate:sel
 ```
 
 You will be notified of the user interaction through the delegate method :
-
 ```obj-c
 
 - (void)scanPayViewController:(ScanPayViewController *)scanPayViewController didScanCard:(SPCreditCard *)card
@@ -60,11 +59,12 @@ You will be notified of the user interaction through the delegate method :
 {
 }
 ```
-If you want to use your own confirmation view simply implement
 
-```obj-c
-- (BOOL)scanPayViewControllerShouldShowConfirmationView:(ScanPayViewController *)scanPayViewController
-{
-  return NO;
-}
-```
+If you want to use your own confirmation view simply implement
+ 
+ ```obj-c
+ - (BOOL)scanPayViewControllerShouldShowConfirmationView:(ScanPayViewController *)scanPayViewController
+ {
+   return NO;
+ }
+ ```
