@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C50A1A017704FBE00E08DBE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C50A19F17704FBE00E08DBE /* Security.framework */; };
+		3C50A1BA1770688700E08DBE /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5D857E1760BC2300C21E7D /* libc++.dylib */; };
 		3C5D855C1760BBED00C21E7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5D855B1760BBED00C21E7D /* UIKit.framework */; };
 		3C5D855E1760BBED00C21E7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5D855D1760BBED00C21E7D /* Foundation.framework */; };
 		3C5D85601760BBED00C21E7D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5D855F1760BBED00C21E7D /* CoreGraphics.framework */; };
@@ -28,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C50A19F17704FBE00E08DBE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3C5D85581760BBED00C21E7D /* scanpay-ios-scan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "scanpay-ios-scan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5D855B1760BBED00C21E7D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3C5D855D1760BBED00C21E7D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -59,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C50A1BA1770688700E08DBE /* libc++.dylib in Frameworks */,
+				3C50A1A017704FBE00E08DBE /* Security.framework in Frameworks */,
 				3CAB50071769C5E5009AF875 /* libstdc++.dylib in Frameworks */,
 				3C5D858B1760BC4E00C21E7D /* QuartzCore.framework in Frameworks */,
 				3C5D85891760BC4500C21E7D /* CoreVideo.framework in Frameworks */,
@@ -95,6 +100,7 @@
 		3C5D855A1760BBED00C21E7D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3C50A19F17704FBE00E08DBE /* Security.framework */,
 				3CAB50061769C5E5009AF875 /* libstdc++.dylib */,
 				3C5D858A1760BC4E00C21E7D /* QuartzCore.framework */,
 				3C5D85881760BC4500C21E7D /* CoreVideo.framework */,
@@ -300,7 +306,8 @@
 				INFOPLIST_FILE = "scanpay-ios-scan/scanpay-ios-scan-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/scanpay\"",
+					"\\\"$(SRCROOT)/scanpay\\\"",
+					"$(SRCROOT)/scanpay-ios-scan/scanpay",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -321,7 +328,8 @@
 				INFOPLIST_FILE = "scanpay-ios-scan/scanpay-ios-scan-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/scanpay\"",
+					"\\\"$(SRCROOT)/scanpay\\\"",
+					"$(SRCROOT)/scanpay-ios-scan/scanpay",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
