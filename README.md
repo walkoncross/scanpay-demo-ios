@@ -25,7 +25,6 @@ Instruction
 3. Go to Project Settings "Build Settings" search for "C++ Standard Library" and change to `libstdc++`
 4. Add the following frameworks to your project :
   * libstdc++.dylib
-  * libc++.dylib 
   * CoreVideo
   * CoreMedia
   * AVFoundation
@@ -33,7 +32,7 @@ Instruction
   * QuartzCore
   * AssetsLibrary
 
-5. Create a class conform to ScanPayDelegate protocol 
+5. Create a class conform to ScanPayDelegate protocol
 
 ### Sample code
 
@@ -50,18 +49,18 @@ You will be notified of the user interaction through the delegate method :
 - (void)scanPayViewController:(ScanPayViewController *)scanPayViewController didScanCard:(SPCreditCard *)card
 {
 }
- 
+
 - (void)scanCancelledByUser:(ScanPayViewController *)scanPayViewController
 {
 }
- 
+
 - (void)scanPayViewController:(ScanPayViewController *)scanPayViewController failedToScanWithError:(NSError *)error
 {
 }
 ```
 
 If you want to use your own confirmation view simply implement
- 
+
  ```obj-c
  - (BOOL)scanPayViewControllerShouldShowConfirmationView:(ScanPayViewController *)scanPayViewController
  {
