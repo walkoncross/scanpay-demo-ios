@@ -31,6 +31,7 @@ Instruction
   * AudioToolbox
   * QuartzCore
   * AssetsLibrary
+  * Security
 
 5. Create a class conform to ScanPayDelegate protocol
 
