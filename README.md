@@ -25,6 +25,7 @@ Instruction
 3. Go to Project Settings "Build Settings" search for "C++ Standard Library" and change to `libstdc++`
 4. Add the following frameworks to your project :
   * libstdc++.dylib
+  * libsqlite3.0.dylib
   * CoreVideo
   * CoreMedia
   * AVFoundation
