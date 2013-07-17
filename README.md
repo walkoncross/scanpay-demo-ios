@@ -76,7 +76,8 @@ Helpers
 SPWebViewFiller is an helper that can manage a Webview and fill the different inputs it provides.
 Here is how it works :
 
-### Case 1 Webview is loaded and fields are ready to be filled
+### Case 1
+Webview is loaded and fields are ready to be filled
 
 ```obj-c
 SPWebViewFiller *filler = [[SPWebViewFiller alloc] init];
@@ -85,7 +86,8 @@ SPWebViewFiller *filler = [[SPWebViewFiller alloc] init];
 [filler release];
 ```
 
-### Case 2 Webview is not loaded and may encounter some redirections that cause the fields not to be available for the moment
+### Case 2
+Webview is not loaded and may encounter some redirections that cause the fields not to be available for the moment
 
 ```obj-c
 SPWebViewFiller *filler = [[SPWebViewFiller alloc] initWithWebview:web];
