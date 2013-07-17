@@ -105,4 +105,4 @@ You can then do your call with your webview and the inputs will be filled for yo
 Contact
 -----------
 
-For any problem please contact us at support@scanpay.it
+For any problems or suggestions please contact us at support@scanpay.it
