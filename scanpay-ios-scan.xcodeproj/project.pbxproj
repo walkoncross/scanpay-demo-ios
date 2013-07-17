@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09E7968D1796E33A007767DD /* SPWebViewFiller.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E7968C1796E33A007767DD /* SPWebViewFiller.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3C50A1A017704FBE00E08DBE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C50A19F17704FBE00E08DBE /* Security.framework */; };
 		3C5707F5178DAA71000BD6C1 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5707F4178DAA71000BD6C1 /* libsqlite3.0.dylib */; };
 		3C5D855C1760BBED00C21E7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5D855B1760BBED00C21E7D /* UIKit.framework */; };
@@ -30,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09E7968B1796E33A007767DD /* SPWebViewFiller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPWebViewFiller.h; path = SPWebViewFiller/SPWebViewFiller.h; sourceTree = "<group>"; };
+		09E7968C1796E33A007767DD /* SPWebViewFiller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPWebViewFiller.m; path = SPWebViewFiller/SPWebViewFiller.m; sourceTree = "<group>"; };
 		3C50A19F17704FBE00E08DBE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3C5707F4178DAA71000BD6C1 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		3C5D85581760BBED00C21E7D /* scanpay-ios-scan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "scanpay-ios-scan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09E7968A1796E323007767DD /* SPWebViewFiller */ = {
+			isa = PBXGroup;
+			children = (
+				09E7968B1796E33A007767DD /* SPWebViewFiller.h */,
+				09E7968C1796E33A007767DD /* SPWebViewFiller.m */,
+			);
+			name = SPWebViewFiller;
+			sourceTree = "<group>";
+		};
 		3C5D854F1760BBED00C21E7D = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +131,7 @@
 		3C5D85611760BBED00C21E7D /* scanpay-ios-scan */ = {
 			isa = PBXGroup;
 			children = (
+				09E7968A1796E323007767DD /* SPWebViewFiller */,
 				3C5D856A1760BBED00C21E7D /* _AppDelegate.h */,
 				3C5D856B1760BBED00C21E7D /* _AppDelegate.m */,
 				3C5D85731760BBED00C21E7D /* _ViewController.h */,
@@ -212,6 +225,7 @@
 				3C5D85681760BBED00C21E7D /* main.m in Sources */,
 				3C5D856C1760BBED00C21E7D /* _AppDelegate.m in Sources */,
 				3C5D85751760BBED00C21E7D /* _ViewController.m in Sources */,
+				09E7968D1796E33A007767DD /* SPWebViewFiller.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
