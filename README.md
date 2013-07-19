@@ -66,9 +66,18 @@ If you want to use your own confirmation view simply implement
  ```obj-c
  - (BOOL)scanPayViewControllerShouldShowConfirmationView:(ScanPayViewController *)scanPayViewController
  {
-   return NO;
+   return YES;
  }
  ```
+
+If you want to hide the manual button
+
+```obj-c
+- (BOOL)scanPayViewControllerShouldShowManualEntryButton:(ScanPayViewController *)scanPayViewController
+{
+    return NO;
+}
+```
 
 Helpers
 -----------

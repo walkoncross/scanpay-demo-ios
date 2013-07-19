@@ -28,7 +28,7 @@
 
 - (IBAction)startScan:(id)sender
 {
-    ScanPayViewController *scan = [[ScanPayViewController alloc]initWithDelegate:self appToken:@"YOUR_TOKEN_HERE"];
+    ScanPayViewController *scan = [[ScanPayViewController alloc]initWithDelegate:self appToken:@"PUT_YOUR_TOKEN_HERE"];
     [self presentViewController:scan animated:YES completion:nil];
 }
 
@@ -47,8 +47,12 @@
 
 - (BOOL)scanPayViewControllerShouldShowConfirmationView:(ScanPayViewController *)scanPayViewController
 {
-    return NO;
+    return YES;
 }
 
+- (BOOL)scanPayViewControllerShouldShowManualEntryButton:(ScanPayViewController *)scanPayViewController
+{
+    return NO;
+}
 
 @end
