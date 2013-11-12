@@ -47,6 +47,11 @@
 	[webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementById('%@').value=\"%@\"", fieldId, value]];
 }
 
+- (void)selectOptionWithName:(NSString *)name forValue:(NSString *)value onWebView:(UIWebView *)webView
+{
+	[webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"document.getElementsByName('%@')[0].value=\"%@\"", name, value]];
+}
+
 #pragma mark - UIWebView Delegate
 
 - (void) webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
