@@ -27,7 +27,7 @@
 		3C5D85871760BC3B00C21E7D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5D85861760BC3B00C21E7D /* AudioToolbox.framework */; };
 		3C5D85891760BC4500C21E7D /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5D85881760BC4500C21E7D /* CoreVideo.framework */; };
 		3C5D858B1760BC4E00C21E7D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5D858A1760BC4E00C21E7D /* QuartzCore.framework */; };
-		3CAB50071769C5E5009AF875 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAB50061769C5E5009AF875 /* libstdc++.dylib */; };
+		3CA765A9195B8B6E00193CA3 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA765A8195B8B6E00193CA3 /* libc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +49,7 @@
 		3C5D856F1760BBED00C21E7D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		3C5D85711760BBED00C21E7D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3C5D85731760BBED00C21E7D /* _ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _ViewController.h; sourceTree = "<group>"; };
-		3C5D85741760BBED00C21E7D /* _ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _ViewController.m; sourceTree = "<group>"; };
+		3C5D85741760BBED00C21E7D /* _ViewController.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = _ViewController.m; sourceTree = "<group>"; };
 		3C5D85771760BBED00C21E7D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/_ViewController.xib; sourceTree = "<group>"; };
 		3C5D85801760BC2A00C21E7D /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		3C5D85821760BC2F00C21E7D /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
@@ -57,6 +57,7 @@
 		3C5D85861760BC3B00C21E7D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		3C5D85881760BC4500C21E7D /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		3C5D858A1760BC4E00C21E7D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3CA765A8195B8B6E00193CA3 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		3CAB50061769C5E5009AF875 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -65,9 +66,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CA765A9195B8B6E00193CA3 /* libc++.dylib in Frameworks */,
 				3C5707F5178DAA71000BD6C1 /* libsqlite3.0.dylib in Frameworks */,
 				3C50A1A017704FBE00E08DBE /* Security.framework in Frameworks */,
-				3CAB50071769C5E5009AF875 /* libstdc++.dylib in Frameworks */,
 				3C5D858B1760BC4E00C21E7D /* QuartzCore.framework in Frameworks */,
 				3C5D85891760BC4500C21E7D /* CoreVideo.framework in Frameworks */,
 				3C5D85871760BC3B00C21E7D /* AudioToolbox.framework in Frameworks */,
@@ -112,6 +113,7 @@
 		3C5D855A1760BBED00C21E7D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3CA765A8195B8B6E00193CA3 /* libc++.dylib */,
 				3C5707F4178DAA71000BD6C1 /* libsqlite3.0.dylib */,
 				3C50A19F17704FBE00E08DBE /* Security.framework */,
 				3CAB50061769C5E5009AF875 /* libstdc++.dylib */,
@@ -310,10 +312,11 @@
 		3C5D857C1760BBED00C21E7D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_CXX_LIBRARY = "libc++";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/scanpay\"",
+					"$(PROJECT_DIR)/scanpay-ios-scan/scanpay",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "scanpay-ios-scan/scanpay-ios-scan-Prefix.pch";
@@ -325,6 +328,7 @@
 					"\"$(SRCROOT)/ScanPay\"",
 					"\"$(SRCROOT)/scanpay-ios-scan/ScanPay\"",
 					"\"$(SRCROOT)/scanpay\"",
+					"$(PROJECT_DIR)/scanpay-ios-scan/scanpay",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -335,10 +339,11 @@
 		3C5D857D1760BBED00C21E7D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_CXX_LIBRARY = "libc++";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/scanpay\"",
+					"$(PROJECT_DIR)/scanpay-ios-scan/scanpay",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "scanpay-ios-scan/scanpay-ios-scan-Prefix.pch";
@@ -350,6 +355,7 @@
 					"\"$(SRCROOT)/ScanPay\"",
 					"\"$(SRCROOT)/scanpay-ios-scan/ScanPay\"",
 					"\"$(SRCROOT)/scanpay\"",
+					"$(PROJECT_DIR)/scanpay-ios-scan/scanpay",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

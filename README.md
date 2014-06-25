@@ -21,10 +21,9 @@ Instruction
 -----------
 
 1. Drag and drop the folder ScanPay to your project
-2. Go to Target -> "Other Linker Flags" and add the following flag: `-ObjC`
-3. Go to Project Settings "Build Settings" search for "C++ Standard Library" and change to `libstdc++`
-4. Add the following frameworks to your project :
-  * libstdc++.dylib
+2. Go to Project Settings "Build Settings" search for "C++ Standard Library" and change to `libc++`
+3. Add the following frameworks to your project :
+  * libc++.dylib
   * libsqlite3.0.dylib
   * CoreVideo
   * CoreMedia
@@ -34,49 +33,24 @@ Instruction
   * AssetsLibrary
   * Security
 
-5. Create a class conform to ScanPayDelegate protocol
-
 ### Sample code
 
 To start the scan simply present the scanViewController from a UIViewController:
 ```obj-c
-ScanPayViewController *scan = [[ScanPayViewController alloc]initWithDelegate:self appToken:@"YOUR_TOKEN_HERE"];
-[self presentViewController:scan animated:YES completion:nil];
-[scan release];
-```
+ScanPayViewController * scanPayViewController = [[ScanPayViewController alloc] initWithToken:@"YOUR_TOKEN_HERE" useConfirmationView:YES useManualEntry:YES];
 
-You will be notified of the user interaction through the delegate method :
-```obj-c
+// If you want to use your own color for set sight
+[scanPayViewController setSightColor:[UIColor colorWithRed:97 / 255.f green:170 / 255.f blue:219 / 255.f alpha:1.0]];
 
-- (void)scanPayViewController:(ScanPayViewController *)scanPayViewController didScanCard:(SPCreditCard *)card
-{
-}
+[scanPayViewController startScannerWithViewController:self success:^(SPCreditCard * card){
+    
+    // You will be notified of the user interaction through this block
+    NSLog(@"%@ Expire %@/%@ CVC: %@", card.number, card.month, card.year, card.cvc);
+} cancel:^{
 
-- (void)scanCancelledByUser:(ScanPayViewController *)scanPayViewController
-{
-}
-
-- (void)scanPayViewController:(ScanPayViewController *)scanPayViewController failedToScanWithError:(NSError *)error
-{
-}
-```
-
-If you want to use your own confirmation view simply implement
-
- ```obj-c
- - (BOOL)scanPayViewControllerShouldShowConfirmationView:(ScanPayViewController *)scanPayViewController
- {
-   return YES;
- }
- ```
-
-If you want to hide the manual button
-
-```obj-c
-- (BOOL)scanPayViewControllerShouldShowManualEntryButton:(ScanPayViewController *)scanPayViewController
-{
-    return NO;
-}
+    // You will be notified when the user has canceled through this block
+    NSLog(@"User cancel");
+}];
 ```
 
 Helpers

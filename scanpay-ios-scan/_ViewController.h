@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ScanPayViewController.h"
 
-@interface _ViewController : UIViewController <ScanPayDelegate>
+@interface _ViewController : UIViewController
 
 - (IBAction)startScan:(id)sender;
 
